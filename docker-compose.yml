@@ -1,0 +1,28 @@
+version: '3.3'
+services:
+  dfc-host-php:
+    build: 
+      context: .
+      dockerfile: Scripts/Containers/dfc-host-php/Setup/Load/dockerfile
+    image: ${project_name}--dfc-host-php
+    hostname: dfc-host-php
+    restart: always
+    tty: true
+    container_name: ${project_name}--dfc-host-php
+    working_dir: /dfc-project/files
+    volumes:
+      - ./WorkFolder/Containers/dfc-host-php/Logs:/var/log:rw
+      - ./WorkFolder/Containers/dfc-host-php/Files:/dfc-project/files:rw
+      - ./WorkFolder/Containers/dfc-host-php/Configs/ClamAV:/etc/clamav:ro
+      - ./WorkFolder/Containers/dfc-host-php/Configs/Neofetch:/home/dfc-user/.config/neofetch:ro
+      - ./WorkFolder/Containers/Common/Firewall:/dfc-project/common/firewall:ro
+      - ./WorkFolder/Containers/Common/Antivirus:/var/lib/clamav:ro
+    ports:
+      - 443:443
+    networks:
+      - dfc-net
+
+networks:
+  dfc-net:
+    name: dfc-net--${project_name}
+    driver: bridge
