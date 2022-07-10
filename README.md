@@ -43,7 +43,8 @@
 - Не исключается возможность работы на более ранних версиях macOS.
 
 # Для использования dfc-проекта нужно установить зависимости
-- Docker (https://docs.docker.com/engine/install). Необходим docker (v2) и docker-compose (v1).
+- Docker (https://docs.docker.com/engine/install). Необходим docker (v2) и docker-compose (v1);
+- XQuartz (https://www.xquartz.org). Опционально, только для macOS. Требуется для поддержки GUI.
 
 # Порядок развертывания проекта
 1. Перейти в ./ и запустить скрипт с помощью команды в терминале "sh dfc-create.sh". Во время этого отвечать на вопросы, после чего dfc-проект будет установлен;
