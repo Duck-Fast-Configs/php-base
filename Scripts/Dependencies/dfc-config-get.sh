@@ -4,6 +4,9 @@
 source $dfc_project_main_folder/dfc.ini
 
 # Global vars
+## GUI
+defaults write org.xquartz.X11 enable_iglx -bool true > /dev/null
+xhost + 127.0.0.1 > /dev/null
 ## Specific
 dfc_global__project_containers_counts_all=1
 ## Docker
