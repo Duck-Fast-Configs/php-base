@@ -25,7 +25,7 @@ case $dfc_project_container in
     message_info "Чтобы выйти из контейнера напишите 'exit'" 1
     message_info "Контейнер открывается" 1
     message_space 1
-    message_info "Популярные команды: sudo, apk, dotnet, nano, git, htop, dust, curl, viu, neofetch" 1
+    message_info "Популярные команды: sudo, apk, php, nano, git, htop, dust, curl, viu, neofetch" 1
     docker-compose -p $dfc_global__project_name exec -u dfc-user dfc-host-php zsh -c "echo '|'" >&3
     docker-compose -p $dfc_global__project_name exec --privileged -u dfc-user dfc-host-php zsh >&3
     ;;
