@@ -11,7 +11,7 @@ dfc_project_main_folder="../../../.."
 message_info "$(date '+%H:%M:%S (%m/%d/%y)')" 2
 message_space 2
 
-docker-compose -p $dfc_global__project_name exec -u root dfc-host-php ash -c "apk add viu --repository=http://dl-cdn.alpinelinux.org/alpine/edge/testing" >&1
+docker-compose -p $dfc_global__project_name exec -u root dfc-host-php ash -c "apk add viu" >&1
 
 message_info "В контейнере 'dfc-host-php' установлен пакет 'viu' и готов к работе" 1
 

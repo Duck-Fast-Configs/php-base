@@ -14,7 +14,7 @@ message_space 2
 message_info "Перейдите по адресу https://localhost, чтобы увидеть запущенный проект (если это сайт)" 1
 message_info "Чтобы выйти -- 'Ctrl + C'" 1
 message_space_null
-docker-compose -p $dfc_global__project_name exec -u dfc-user dfc-host-php zsh -c "php8 main.php" >&3
+docker-compose -p $dfc_global__project_name exec -u dfc-user dfc-host-php zsh -c "php81 main.php" >&3
 message_space_null
 message_space_null
 

@@ -13,7 +13,7 @@ message_space 2
 
 message_info "Перейдите по адресу https://localhost, чтобы увидеть запущенный проект (если это сайт)" 1
 message_info "Чтобы выйти -- 'Ctrl + C'" 1
-docker-compose -p $dfc_global__project_name exec -u dfc-user --detach dfc-host-php zsh -c "php8 main.php" >&1
+docker-compose -p $dfc_global__project_name exec -u dfc-user --detach dfc-host-php zsh -c "php81 main.php" >&1
 message_info "Чтобы остановить проект нужно использовать файл 'dfc-stop.sh'" 1
 
 message_info "В контейнере 'dfc-host-php' на заднем плане запущен 'стандартный' проект" 1

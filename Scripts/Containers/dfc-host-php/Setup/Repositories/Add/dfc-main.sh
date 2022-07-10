@@ -11,7 +11,7 @@ dfc_project_main_folder="../../../../../.."
 message_info "$(date '+%H:%M:%S (%m/%d/%y)')" 2
 message_space 2
 
-docker-compose -p $dfc_global__project_name exec -u root dfc-host-php zsh -c "echo 'https://dl-cdn.alpinelinux.org/alpine/v3.14/main' >> /etc/apk/repositories" >&1
+docker-compose -p $dfc_global__project_name exec -u root dfc-host-php zsh -c "echo 'https://dl-cdn.alpinelinux.org/alpine/v3.16/main' >> /etc/apk/repositories" >&1
 (cd $dfc_project_main_folder/Scripts/Containers/dfc-host-php/Setup/Repositories && sh dfc-update.sh -d1) >&3
 
 message_info "В контейнере 'dfc-host-php' добавлен 'main' репозиторий и настроен" 1
