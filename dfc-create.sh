@@ -6,6 +6,7 @@ dfc_project_main_folder="."
 
 # Header of script
 . $dfc_project_main_folder/Scripts/Dependencies/dfc-script-header.sh
+. $dfc_project_main_folder/Scripts/Dependencies/dfc-check-network.sh
 
 # General process
 message_info "$(date '+%H:%M:%S (%d/%m/%Y)')" 2
@@ -83,8 +84,7 @@ docker-compose -p $dfc_global__project_name restart >&1
 (cd $dfc_project_main_folder/Scripts/Containers/dfc-host-php/Setup && sh dfc-tmux.sh -d1) >&3
 (cd $dfc_project_main_folder/Scripts/Containers/dfc-host-php/Setup && sh dfc-nload.sh -d1) >&3
 (cd $dfc_project_main_folder/Scripts/Containers/dfc-host-php/Setup && sh dfc-viu.sh -d1) >&3
-(cd $dfc_project_main_folder/Scripts/Containers/dfc-host-php/Setup && sh dfc-htop.sh -d1) >&3
-(cd $dfc_project_main_folder/Scripts/Containers/dfc-host-php/Setup && sh dfc-php.sh -d1) >&3
+(cd $dfc_project_main_folder/Scripts/Containers/dfc-host-php/Setup && sh dfc-htop.sh -d1) >&3(cd $dfc_project_main_folder/Scripts/Containers/dfc-host-php/Setup && sh dfc-php.sh -d1) >&3
 (cd $dfc_project_main_folder/Scripts/Containers/dfc-host-php/Timezones && sh dfc-default.sh -d1) >&3
 (cd $dfc_project_main_folder/Scripts/Containers/dfc-host-php/Timezones && sh dfc-update.sh -d1) >&3
 (cd $dfc_project_main_folder/Scripts/Containers/dfc-host-php/Setup && sh dfc-clean.sh -d1) >&3
